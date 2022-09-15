@@ -11,6 +11,7 @@ class PostAdmin(admin.ModelAdmin):
         'view_count',
         'created_at',
         'updated_at',
+        'author',
     )
     search_fields = (
     	'title',

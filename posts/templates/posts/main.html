@@ -18,6 +18,7 @@
             	{% endif %}
                 <div class="card-body">
                 	<h5 class="card-title">{{ post.title }}</h5>
+                    <p>조회수 : {{ post.view_count }} 작성자 : {{ post.author }}</p>
                 	<p class="card-text">{{ post.content }}</p>
                 	<p>{{ post.created_at }}</p>
                 	<a href="{{ post.get_absolute_url }}" class="btn btn-primary">자세히보기</a>

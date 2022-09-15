@@ -8,5 +8,5 @@ urlpatterns = [
     path('show/<int:post_id>', show, name="show"),
     path('edit/<int:post_id>/', edit, name="edit"),
     path('update/<int:post_id>/', update, name="update"),
-    path('delete.<int:post_id>', delete, name="delete"),
+    path('delete/<int:post_id>', delete, name="delete"),
 ]
