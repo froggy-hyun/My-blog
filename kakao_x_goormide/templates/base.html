@@ -18,13 +18,24 @@
       
     <!-- message 표시 -->
     {% if messages %}
-    <div class="alert alert-danger my-3" role="alert">
-    {% for message in messages %}
-        <strong>{{ message.tags }}</strong>
-        <ul><li>{{ message.message }}</li></ul>
-    {% endfor %}
-    </div>
-    {% endif %}
+        <div>
+        {% for message in messages %}
+            {% if message.tags == "error" %}
+            <div class="alert alert-danger my-3" role="alert">
+    			<strong>{{ message.tags }}</strong>
+            	<ul><li>{{ message.message }}</li></ul>
+            </div>
+            {% endif %}
+            {% if message.tags == "info" %}
+            <div class="alert alert-success my-3" role="alert">
+    			<strong>{{ message.tags }}</strong>
+            	<ul><li>{{ message.message }}</li></ul>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        {% endif %}
+      
       
     {% block content %}
       

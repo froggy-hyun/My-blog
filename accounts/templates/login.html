@@ -8,11 +8,11 @@
             {% csrf_token %}
             아이디:
             <br>
-            <input name="username" type="text">
+            <input name="username" type="text" required>
             <br>
             비밀번호:
             <br>
-            <input name="password" type="password">
+            <input name="password" type="password" required>
             <br><br>
             <input type="submit" class="btn btn-primary" value="Login">
         </form>
